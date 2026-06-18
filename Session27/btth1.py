@@ -92,9 +92,9 @@ Chọn loại tài khoản (1-3): """)
         return
     
     account_number = input("Nhập số tài khoản 10 chữ số: ")
-    # if not BaseAccount("","").validate_account_number(account_number):
-    #     print("Số tài khoản không hợp lệ! Phải gồm đúng 10 chữ số.")
-    #     return
+    if not BaseAccount.validate_account_number(account_number):
+        print("Số tài khoản không hợp lệ! Phải gồm đúng 10 chữ số.")
+        return
     
     account_name = input("Nhập tên chủ tài khoản: ")
     if choice_type_account == "1":
